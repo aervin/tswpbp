@@ -6,10 +6,6 @@ export interface IPlayerProps {
     isPlayersTurn: boolean;
 }
 
-export interface IPlayerState {
-    score: number;
-}
-
 export default class Player extends React.Component<
     IPlayerProps,
     IPlayerProps
@@ -20,14 +16,10 @@ export default class Player extends React.Component<
 
     constructor(props: IPlayerProps) {
         super(props);
-        this.score = props.score;
-        this.playersTurn = props.isPlayersTurn;
+        this.state = { ...props };
     }
 
-    public modifyScore(points: number): number {
-        if (points !== undefined && typeof points === 'number') {
-            this.score += points;
-        }
-        return this.score;
+    public render(): JSX.Element {
+        return <p>{this.state.name}</p>;
     }
 }

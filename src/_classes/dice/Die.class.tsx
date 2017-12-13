@@ -8,88 +8,77 @@ export interface IDieProps {
 }
 
 export default class Die extends React.Component<IDieProps, IDieProps> {
-    /* The number of dots on this die's face */
-    public value: number;
-
-    /* Die have a GroupId if they've been counted toward
-    a player's potential gains */
-    private diceGroupId: number;
-
-    /* Allows/disallows player to roll this die */
-    private disabled: boolean;
-
-    /* Player has selected this die for scoring */
-    private selected: boolean;
-
     constructor(props: IDieProps) {
         super(props);
-        this.value = props.value || 1;
-        this.diceGroupId = props.diceGroupId || -1;
-        this.disabled = props.disabled || false;
-        this.selected = props.selected || false;
+        this.state = { ...props };
     }
 
     public get groupId() {
-        return this.diceGroupId;
+        return this.state.diceGroupId;
     }
 
     public get status() {
         return {
-            selected: this.selected,
-            disabled: this.disabled
+            selected: this.state.selected,
+            disabled: this.state.disabled
         };
     }
 
     public deselect(): void {
-        this.selected = false;
+        this.setState({ selected: false });
     }
 
     public disable(): void {
-        this.disabled = true;
+        this.setState({ disabled: true });
     }
 
     public enable(): void {
-        this.disabled = false;
+        this.setState({ disabled: false });
     }
 
     public render(): JSX.Element {
         return (
-            <img src={DICE_IMAGES.find(img => img.value === this.value)!.img} />
+            <img
+                src={
+                    DICE_IMAGES.find(img => img.value === this.state.value)!.img
+                }
+            />
         );
     }
 
     public select(): void {
-        this.selected = true;
+        this.setState({ selected: true });
     }
 }
 
+// tslint:disable-next-line:no-any
 const DICE_IMAGES: { value: number; img: any }[] = [
     {
         value: 0,
-        img: require('./../../_images/dice_animated.gif')
+        img: require('./../../_images/dice/dice_animated.gif')
     },
     {
         value: 1,
-        img: require('./../../_images/dice_one.png')
+        img: require('./../../_images/dice/dice_one.png')
     },
     {
         value: 2,
-        img: require('./../../_images/dice_two.png')
+        img: require('./../../_images/dice/dice_two.png')
     },
     {
         value: 3,
-        img: require('./../../_images/dice_three.png')
+        img: require('./../../_images/dice/dice_three.png')
     },
     {
         value: 4,
-        img: require('./../../_images/dice_four.png')
+        img: require('./../../_images/dice/dice_four.png')
     },
     {
         value: 5,
-        img: require('./../../_images/dice_five.png')
+        img: require('./../../_images/dice/dice_five.png')
     },
     {
         value: 6,
-        img: require('./../../_images/dice_six.png')
+        img: require('./../../_images/dice/dice_six.png')
     }
 ];
