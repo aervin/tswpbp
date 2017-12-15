@@ -9,14 +9,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/aervin/tswb-boilerplate.git"
+        "url": "git+https://github.com/aervin/tswbbp.git"
     },
     "author": "aaron.jeffrey.ervin@gmail.com",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/aervin/tswb-boilerplate/issues"
+        "url": "https://github.com/aervin/tswbbp/issues"
     },
-    "homepage": "https://github.com/aervin/tswb-boilerplate#readme",
+    "homepage": "https://github.com/aervin/tswbbp#readme",
     "devDependencies": {
         "ts-loader": "^3.2.0",
         "typescript": "^2.6.2",
