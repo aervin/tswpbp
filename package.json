@@ -1,22 +1,19 @@
 {
   "name": "zilch",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts-ts": "2.8.0"
-  },
+  "version": "1.0.0",
+  "description": "A game of dice and chance for the browser",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "test": "test"
   },
-  "devDependencies": {
-    "@types/jest": "^21.1.8",
-    "@types/node": "^8.0.58",
-    "@types/react": "^16.0.29",
-    "@types/react-dom": "^16.0.3"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aervin/zilch.git"
+  },
+  "author": "aaron.jeffrey.ervin@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aervin/zilch/issues"
+  },
+  "homepage": "https://github.com/aervin/zilch#readme"
 }
