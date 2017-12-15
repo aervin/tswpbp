@@ -1,7 +1,7 @@
 {
-    "name": "tswb-boilerplate",
+    "name": "zilch",
     "version": "1.0.0",
-    "description": "Your TS/WB project description here",
+    "description": "Zilch -- a game of dice and chance!",
     "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server",
@@ -9,14 +9,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/aervin/tswbbp.git"
+        "url": "git+https://github.com/aervin/zilch.git"
     },
     "author": "aaron.jeffrey.ervin@gmail.com",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/aervin/tswbbp/issues"
+        "url": "https://github.com/aervin/zilch/issues"
     },
-    "homepage": "https://github.com/aervin/tswbbp#readme",
+    "homepage": "https://github.com/aervin/zilch#readme",
     "devDependencies": {
         "ts-loader": "^3.2.0",
         "typescript": "^2.6.2",
