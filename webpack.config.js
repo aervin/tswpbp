@@ -1,19 +1,24 @@
 module.exports = {
-    entry: './src/app.ts',
+    entry: "./src/app.ts",
     output: {
-        filename: 'bundle.js',
-        path: __dirname
+        filename: "bundle.js",
+        path: __dirname,
     },
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                loader: 'ts-loader',
-                exclude: /node_modules/
-            }
-        ]
+                loader: "ts-loader",
+                exclude: /node_modules/,
+            },
+        ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js']
-    }
+        extensions: [".tsx", ".ts", ".js"],
+    },
+    node: {
+        os: "empty",
+        fs: "empty",
+        glob: "empty"
+    },
 };
